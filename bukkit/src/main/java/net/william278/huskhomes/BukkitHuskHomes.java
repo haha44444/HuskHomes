@@ -88,9 +88,9 @@ public class BukkitHuskHomes extends JavaPlugin implements HuskHomes, BukkitTask
     private MorePaperLib morePaperLib;
     private Toilet toilet;
 
-    private final Set<SavedUser> savedUsers = Sets.newHashSet();
+    private final Set<SavedUser> savedUsers = Sets.newConcurrentHashSet();
     private final Set<UUID> currentlyOnWarmup = Sets.newConcurrentHashSet();
-    private final Map<UUID, OnlineUser> onlineUserMap = Maps.newHashMap();
+    private final Map<UUID, OnlineUser> onlineUserMap = Maps.newConcurrentMap();
     private final Map<String, List<User>> globalUserList = Maps.newConcurrentMap();
     private final List<Command> commands = Lists.newArrayList();
 
