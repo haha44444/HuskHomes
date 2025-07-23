@@ -35,4 +35,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: CI Artifacts
-          path: libs/*.jar
+          path: build/libs/*.jar
